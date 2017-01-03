@@ -212,7 +212,7 @@ git push origin blog-source:blog-source
 
 构建完成后，我们去网站内就可以看到新提交的page了
 
-
+未完待续。。。（ Travis CI 自动编译时遇到的各种小坑）
 
 
 
