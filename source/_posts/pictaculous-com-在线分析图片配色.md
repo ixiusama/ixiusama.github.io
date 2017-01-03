@@ -2,7 +2,6 @@
 layout: post
 title: pictaculous.com-在线分析图片配色
 tags:
-  - null
 comments: true
 toc: true
 mathjax: true
