@@ -63,17 +63,18 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 #RSS订阅
-plugins:
-  - hexo-generator-feed
+#plugins:
+#  - hexo-generator-feed
+  plugins:
   - hexo-tag-emojis
 # hexo-tag-emojis plugin configuration
 emojis:
   image_dir: images/emojis
 #Feed Atom
-#feed:
-#type: atom
-#path: atom.xml
-#limit: 20
+feed:
+type: atom
+path: atom.xml
+limit: 20
 ## Themes: http://hexo.io/themes/
 theme: next
 
