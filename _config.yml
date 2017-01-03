@@ -70,10 +70,10 @@ plugins:
 emojis:
   image_dir: images/emojis
 #Feed Atom
-feed:
-type: atom
-path: atom.xml
-limit: 20
+#feed:
+#type: atom
+#path: atom.xml
+#limit: 20
 ## Themes: http://hexo.io/themes/
 theme: next
 
