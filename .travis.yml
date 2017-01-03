@@ -36,3 +36,9 @@ env:
  global:
    - GH_REF: github.com/ixiusama/ixiusama.github.io.git
    #设置GH_REF，注意更改yourname
+   
+after_success:
+- git config --global user.name "ixiusama"
+- git config --global user.email "ixiusama@hotmail.com"
+- sed -i'' "s~git@github.com:ixiusama/ixiusama.github.io.git~https://${GH_TOKEN}:x-oauth-basic@github.com/ixiusama/ixiusama.github.io.git~" _config.yml
+- hexo deploy
