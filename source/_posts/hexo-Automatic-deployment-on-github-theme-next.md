@@ -1,6 +1,6 @@
 ---
 layout: post
-title: hexo_Automatic_deployment_on_github_theme_next
+title: Travis CI 自动部署 Hexo 博客到 Github(带主题版)
 tags:
   - null
 comments: true
