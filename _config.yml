@@ -78,10 +78,10 @@ limit: 20
 theme: next
 
 # hexo sitemap网站地图
-sitemap:
-path: sitemap.xml
-baidusitemap:
-path: baidusitemap.xml
+#sitemap:
+#path: sitemap.xml
+#baidusitemap:
+#path: baidusitemap.xml
 
 
 
