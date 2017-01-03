@@ -65,8 +65,8 @@ pagination_dir: page
 #RSS订阅
 #plugins:
 #  - hexo-generator-feed
-  plugins:
-  - hexo-tag-emojis
+#  plugins:
+#  - hexo-tag-emojis
 # hexo-tag-emojis plugin configuration
 emojis:
   image_dir: images/emojis
