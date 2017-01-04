@@ -6,40 +6,40 @@ cache:
   directories:
     - node_modules
 
-branches:
-  only:
-    - blog-source
-
 # S: Build Lifecycle
 before_install:
-  - openssl aes-256-cbc -K $encrypted_0eca3fdcb0c3_key -iv $encrypted_0eca3fdcb0c3_iv -in ./.travis/id_rsa.enc -out ~/.ssh/id_rsa -d
-  - chmod 600 ~/.ssh/id_rsa
-  - eval $(ssh-agent)
-  - ssh-add ~/.ssh/id_rsa
-  - cp .travis/ssh_config ~/.ssh/config
-  - npm install -g hexo-cli # 安装 hexo
-  - git submodule init #用于更新主题,更新源为自己的主题项目，否则会clone最新NexT主题，而官方主题配置文件没有设置
-  - git submodule update
+- export TZ='Asia/Shanghai'
+- npm install -g hexo
+- npm install -g hexo-cli
 
 install:
-  - npm install # 安装 package.json 中的插件
+  - npm install
   
 before_script:
   - npm install -g gulp
-  
+
 script:
+  - git submodule init #用于更新主题,更新源为自己的主题项目，否则会clone最新NexT主题，而官方主题配置文件没有设置
+  - git submodule update
   - hexo clean && hexo g
   - gulp default #使用 gulp 对流程进行优化
 
-after_success:
-  - git config --global user.name "ixiusama"
-  - git config --global user.email "ixiusama@hotmail.com"
-  - sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.yml
-  - hexo deploy
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "ixiusama"
+  - git config user.email "ixiusama@hotmail.com"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+
 # E: Build LifeCycle
-   
+
+branches:
+  only:
+    - blog-source
 env:
  global:
    - GH_REF: github.com/ixiusama/ixiusama.github.io.git
    #设置GH_REF，注意更改yourname
-
+   
