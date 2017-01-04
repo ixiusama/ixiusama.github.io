@@ -1,6 +1,11 @@
 language: node_js
 node_js: stable
 
+# cache this directory
+cache:
+  directories:
+    - node_modules
+
 # S: Build Lifecycle
 before_install:
 - export TZ='Asia/Shanghai'
