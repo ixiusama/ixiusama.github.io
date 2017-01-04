@@ -120,7 +120,7 @@ Build pushes：当推送完这个分支后开始构建
 
 首先我们来到 github 的设置界面，点击到 Personal access tokens 页面，点击右上角的 Generate new token 按钮会重新生成一个，点击后他会叫你输入密码，然后来到如下界面，给他取一个名字（随意取即可），下面是勾选一些权限
 
-![img](http://upload-images.jianshu.io/upload_images/1152636-a16de8c027bf5091.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](http://7xoirq.com1.z0.glb.clouddn.com/Travis%20CI%205.jpg)
 
 生成完后，你需要拷贝下来，只有这时候显示token（仅显示一次之后无法查看），务必要拷贝下来，如果忘了只能重新生成一个了，拷贝完以后我们需要到 Travis CI 网站配置下。
 
