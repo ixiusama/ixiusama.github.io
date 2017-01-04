@@ -4,7 +4,6 @@ node_js: stable
 # S: Build Lifecycle
 before_install:
   - openssl aes-256-cbc -K $encrypted_0eca3fdcb0c3_key -iv $encrypted_0eca3fdcb0c3_iv -in id_rsa.enc -out id_rsa -d
-  -${KEY_ssh}
   - chmod 600 ~/.ssh/id_rsa
   - eval $(ssh-agent)
   - ssh-add ~/.ssh/id_rsa
