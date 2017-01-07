@@ -2,7 +2,6 @@
 layout: post
 title: Travis CI 自动部署 Hexo 博客到 Github(带主题版)
 tags:
-  - null
 comments: true
 toc: true
 mathjax: true
